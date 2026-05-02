@@ -1,0 +1,195 @@
+.detail-page { min-height: 100vh; padding: 40px 24px; }
+.detail-inner { max-width: 1200px; margin: 0 auto; }
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 32px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--text-muted); transition: color .15s; }
+.breadcrumb a:hover { color: var(--accent-light); }
+.breadcrumb span { color: var(--text); }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 72px;
+}
+
+.detail-img-wrap {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.detail-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.detail-discount {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--red);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.detail-img {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  background: linear-gradient(135deg, #1a1a38, #0f0f28);
+}
+
+.detail-category {
+  font-size: 12px;
+  color: var(--accent-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.detail-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.stars { color: #F59E0B; }
+.detail-reviews { color: var(--text-dim); font-size: 13px; }
+
+.detail-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.detail-price {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+.detail-original { font-size: 18px; color: var(--text-dim); text-decoration: line-through; }
+.detail-save { font-size: 13px; color: var(--green); font-weight: 600; }
+
+.detail-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.detail-stock { font-size: 14px; margin-bottom: 24px; font-weight: 500; }
+
+.detail-qty-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.qty-control button {
+  width: 38px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 18px;
+  transition: background .15s;
+}
+.qty-control button:hover { background: var(--surface2); }
+.qty-control span {
+  min-width: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-cart-btn {
+  flex: 1;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background .2s;
+}
+.add-cart-btn:hover { background: #6d28d9; }
+.add-cart-btn.added { background: var(--green); }
+
+.detail-specs h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+.detail-specs ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.detail-specs li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.detail-specs li span { color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+.related { padding-top: 40px; border-top: 1px solid var(--border); }
+
+@media (max-width: 768px) {
+  .detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .detail-img { height: 260px; }
+  .detail-name { font-size: 26px; }
+  .detail-prices { flex-wrap: wrap; }
+}
